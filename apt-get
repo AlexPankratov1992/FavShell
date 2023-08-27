@@ -1,0 +1,2 @@
+ - suppress ask questions like [Y/n]
+    DEBIAN_FRONTEND=noninteractive
