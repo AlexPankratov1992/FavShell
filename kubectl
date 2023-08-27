@@ -1,0 +1,4 @@
+- get all resources across all namespaces
+  --all-namespaces
+  kubectl get pods --all-namespaces
+
