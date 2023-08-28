@@ -2,3 +2,8 @@
   --all-namespaces
   kubectl get pods --all-namespaces
 
+- read yaml file of resource
+  -o yaml
+  kubectl get ingress oes-ingress -o yaml
+
+
