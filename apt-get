@@ -1,2 +1,10 @@
- - suppress ask questions like [Y/n]
+- suppress ask questions like [Y/n]
     DEBIAN_FRONTEND=noninteractive
+- all installted packages
+    sudo apt list --installed | grep vlc
+- safely clean related packages
+    sudo apt-get purge --simulate vlc
+    if everything is ok(not disruptive), 
+    sudo apt-get purge remove vlc
+    else
+    sudo apt-get remove vlc
