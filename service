@@ -1,0 +1,6 @@
+- remove systemd service
+  systemctl list-unit-files --type=service | grep ssh
+  sudo systemctl disable ssh
+  sudo systemctl stop ssh
+  sudo rm /etc/systemd/system/ssh.service
+  sudo systemctl daemon-reload  
