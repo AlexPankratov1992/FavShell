@@ -6,3 +6,8 @@
         /etc/apt/sources.list.d/jenkins.list > /dev/null
       sudo apt-get update
       sudo apt-get install jenkins
+
+      repository key: protect tampering of package
+      /dev/null: discard terminal output(standard output)
+      tee: read from standard input, and write to both file, and std output simultaneously.
+            used with pipes
