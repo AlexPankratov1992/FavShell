@@ -3,8 +3,14 @@
 - all installted packages
     sudo apt list --installed | grep vlc
 - safely clean related packages
+    !!purge is often disruptive, so check before using it.
     sudo apt-get purge --simulate vlc
     if everything is ok(not disruptive), 
     sudo apt-get purge remove vlc
     else
     sudo apt-get remove vlc
+- batch remove
+    sudo apt list --installed | grep vlc | cut -d/ -f1 | xargs -I {} sudo apt remove -y {}
+        cut -d/(this is delimiator) -f1(this is index of splitted list, starting from 1)
+        vlc/now 2.6.14 amd64 [installed,local]  -> vlc
+        cut -d/ -f2 -> now 2.6.14 amd64 [installed,local]
