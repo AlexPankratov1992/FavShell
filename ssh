@@ -4,3 +4,7 @@
     t: crypt algorithm
     output: ~/.ssh/
 
+- enable ssh for desktop versions
+  vim /etc/ssh/sshd_config
+  PermitRootLogin yes
+  systemctl restart sshd
