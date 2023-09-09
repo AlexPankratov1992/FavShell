@@ -1,0 +1,5 @@
+- install gcc on debian
+  apt install build-essential
+  gcc --version
+
+  
