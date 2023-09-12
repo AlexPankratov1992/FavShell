@@ -6,4 +6,25 @@
   -o yaml
   kubectl get ingress oes-ingress -o yaml
 
+- delete all pods in namespace
+  kubectl delete pods --all -n oes
+
+- delete stuck namespace 
+  inject no finalize yaml to proxy
+  https://www.redhat.com/sysadmin/troubleshooting-terminating-namespaces
+
+- api resources
+  kubectl api-resources --verbs=list --namespaced
+
+- get all resources
+  kubectl api-resources --verbs=list --namespaced -o name \
+  | xargs -n 1 kubectl get --show-kind --ignore-not-found -n oes
+
+- clean API resource
+  kubectl get <resource>
+  kubectl delete <resource> --all 
+  kubectl delete crd <resource>
+
+
+
 
