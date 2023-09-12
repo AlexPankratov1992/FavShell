@@ -13,6 +13,13 @@
   inject no finalize yaml to proxy
   https://www.redhat.com/sysadmin/troubleshooting-terminating-namespaces
 
+  export NAMESPACE=oesdevops-config
+  kubectl get namespace ${NAMESPACE} -o json > tmp.json
+  Remove kubernetes from the finalizer array, and save the file
+  kubectl proxy
+  another console
+  curl -k -H "Content-Type: application/json" -X PUT --data-binary @tmp.json http://127.0.0.1:8001/api/v1/namespaces/${NAMESPACE}/finalize
+
 - api resources
   kubectl api-resources --verbs=list --namespaced
 
