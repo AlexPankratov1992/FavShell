@@ -1,0 +1,21 @@
+- disk usage  
+  df -h
+  d: disk
+  f: filesystem
+  -h: human readable format instead of 1000-based, display as KB, MB, GB
+  tmpfs:  temporary filesystem mounted in memory (RAM), use disk as a fallback
+  ramfs:  purely RAM based filesystem, not persistent when reboot
+  sysfs:  liunx kernel info, mounted on /sys, disk-based 
+
+- mount iso file to vm
+  mkdir /mnt/source
+  sudo mount /dev/sr0 /mnt/source
+  s: SCSI (old standard for transfering data between computer and peripheral device), historical reason
+  r: read-only
+  0: number of sr devices connected to ubuntu
+
+- show history in terminal
+  history
+  !123 -> reuse prev long command easily 
+
+
