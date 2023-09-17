@@ -2,3 +2,6 @@
   git config --global user.name "iam"
   git config --global user.email "iam@iam"
   git config --global user.password "PAT"
+
+- ssh keygen
+  ssh-keygen -t ed25519 -C "your_email@example.com"
