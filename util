@@ -1,21 +1,44 @@
 - disk usage  
   df -h
-  d: disk
-  f: filesystem
-  -h: human readable format instead of 1000-based, display as KB, MB, GB
-  tmpfs:  temporary filesystem mounted in memory (RAM), use disk as a fallback
-  ramfs:  purely RAM based filesystem, not persistent when reboot
-  sysfs:  liunx kernel info, mounted on /sys, disk-based 
+    d: disk
+    f: filesystem
+    -h: human readable format instead of 1000-based, display as KB, MB, GB
+    tmpfs:  temporary filesystem mounted in memory (RAM), use disk as a fallback
+    ramfs:  purely RAM based filesystem, not persistent when reboot
+    sysfs:  liunx kernel info, mounted on /sys, disk-based 
+
+- memory usage(quick overview of memory usage, combined with top, htop)
+  free -h
+    physical memory and swap memory
+    swap: 
+      - If a process isn't actively using its allocated memory, 
+        the operating system can move its data to swap space
+      - hibernate: save memory to disk
+      - enable allocation memory more than physical capacity
+    shared: memory segment multiple processes can access
+    buff/cache: cache segment to speed up access to disk files and block devices
+    swap memory doesn't have shared, buff/cache fields for its nature
+    h: human readable format  
+  free -s 2
+    update every 2 seconds
+    s: second
+  free -th
+    show total sum records at the end of table
+    t: total
 
 - mount iso file to vm
   mkdir /mnt/source
   sudo mount /dev/sr0 /mnt/source
-  s: SCSI (old standard for transfering data between computer and peripheral device), historical reason
-  r: read-only
-  0: number of sr devices connected to ubuntu
+    s: SCSI (old standard for transfering data between computer and peripheral device), historical reason
+    r: read-only
+    0: number of sr devices connected to ubuntu
 
-- show history in terminal
+- show terminal command history
   history
   !123 -> reuse prev long command easily 
 
-
+- windows task manager in ubuntu
+  htop
+    h: Hisham's top
+    developer's name
+  
