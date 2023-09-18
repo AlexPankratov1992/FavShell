@@ -1,0 +1,14 @@
+- get all instances including stopped one, remove instance
+  docker ps -a
+  docker rm 1bc
+
+- get images, and delete
+  docker images -a
+  docker rmi 1bc
+
+- see inner filesystem of docker image
+  docker run -it myimage sh
+  once execute remove it with docker rm 1bc
+
+  
+
