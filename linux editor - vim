@@ -1,0 +1,42 @@
+- go to the start of first file
+  gg
+- go to the start of last line
+  G
+- go to the next line
+  gj
+- go to the prev line
+  gk
+- select current line
+  V
+- select words
+  v
+- select block 
+  Ctrl+v
+- select all(Ctrl+A)
+  ggVG
+- paste
+  p, P
+  if copied content is line,
+  p: paste to the next line
+  P: paste to the prev line
+- copy 
+  y: copy selected text
+  yy: copy current line
+  3yy: copy following three lines
+  y2w: copy two words(from current cursor position)
+  yiw: copy current word
+  y$: copy to the end of line
+  y^: copy from the start of line
+  
+- cut, delete
+  d: cut/delete selected text
+  dd: cut/delete current line
+  3dd: cut/delete following 3 lines
+- undo
+  u
+  2u
+  3u
+- redo 
+  Ctrl+r
+
+
