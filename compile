@@ -2,4 +2,9 @@
   apt install build-essential
   gcc --version
 
+- get the version of glibc (GNU c library)
+  find / -name 
+  sudo strings /usr/lib/x86_64-linux-gnu/libc.so.6 | grep GLIBC
+
+  ldd --version
   
