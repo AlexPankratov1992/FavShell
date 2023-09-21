@@ -1,0 +1,3 @@
+- get the process address ranges of executable
+    example: vscode
+    pmap -x $(pidof -s code)
