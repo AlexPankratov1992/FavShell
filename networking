@@ -1,0 +1,13 @@
+- [nping] tcp ping when ICMP is blocked
+    command:
+        sudo apt install nmap
+        sudo nping -c 10 --tcp 8.8.8.8
+
+    result:
+        Starting Nping 0.7.80 ( https://nmap.org/nping ) at 2023-09-22 12:20 +04
+        SENT (0.0168s) TCP 172.16.80.129:31019 > 8.8.8.8:80 S ttl=64 id=47126 iplen=40  seq=389444491 win=1480 
+        RCVD (0.2624s) TCP 8.8.8.8:80 > 172.16.80.129:31019 SA ttl=128 id=35803 iplen=44  seq=1062863644 win=64240 <mss 1460>
+    
+        Max rtt: 245.554ms | Min rtt: 167.037ms | Avg rtt: 176.597ms
+        Raw packets sent: 10 (400B) | Rcvd: 10 (460B) | Lost: 0 (0.00%)
+        Nping done: 1 IP address pinged in 9.24 seconds
